@@ -12,6 +12,7 @@ const App=()=>{
 
   }
   const calculate=()=>{
+    // eslint-disable-next-line
     setResult(eval(result).toString());
   }
   return(
