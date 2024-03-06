@@ -5,14 +5,16 @@ const Shishir = () => {
   const [result, setResult] = useState("");
 
   const clickHandler = (event) => {
+    // eslint-disable-next-line
     setResult(result.concat(event.target.value));
   }
 
   const clearDisplay = () => {
+    // eslint-disable-next-line
     setResult("");
   }
 
-  const calculate = () => {
+  function calculate () {
     // eslint-disable-next-line
     setResult(eval(result).toString());
   }
@@ -27,6 +29,7 @@ const Shishir = () => {
       } else if (key === '+' || key === '-' || key === '*' || key === '/') {
         setResult(result.concat(' ' + key + ' '));
       } else if (key === 'Enter') {
+        // eslint-disable-next-line
         calculate();
       } else if (key === 'Backspace') {
         setResult(result.slice(0, -1));
@@ -38,7 +41,7 @@ const Shishir = () => {
     return () => {
       document.removeEventListener('keydown', handleKeyDown);
     };
-  }, [result]);
+  }, [result,calculate]);
 
   return (
     <div className='calc'>
