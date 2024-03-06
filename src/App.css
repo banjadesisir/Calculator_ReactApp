@@ -1,26 +1,57 @@
-.calc{
-  width: 320px;
-  margin: 100px auto;
+body {
+  background-color: #f0f0f0; /* Light gray background */
+  font-family: Arial, sans-serif; /* Use a common sans-serif font */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
 }
-#answer{
-  background-color: rgb(176, 182, 162);
+
+.calc {
+  background-color: #e0e0e0; /* Lighter gray background for calculator */
+  padding: 20px;
+  border-radius: 20px; /* Rounded corners */
+  box-shadow: 10px 10px 20px #c7c7c7, -10px -10px 20px #ffffff; /* Neumorphic shadow */
+}
+
+#answer {
+  background-color: #d0d0d0; /* Slightly darker background color for display */
   padding: 10px;
   font-size: 35px;
-  width: 295px;
-  height: 50px;
-  text-align: right;
-  border: 3px solid #333;
+  width: calc(100% - 20px); /* Adjust width to fit within the calculator */
+  border: none; /* Remove the border */
+  border-radius: 10px; /* Rounded corners */
+  margin-bottom: 20px; /* Add some spacing */
+  box-shadow: inset 5px 5px 10px #c7c7c7, inset -5px -5px 10px #ffffff; /* Inner shadow */
+}
 
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 columns with equal width */
+  gap: 10px; /* Spacing between buttons */
 }
-.button{
-  background: #403d3d;
+
+.button {
+  background: #d0d0d0; /* Light gray background for buttons */
   height: 80px;
-  width: 80px;
-  color: white;
+  width: 100%; /* Full width for buttons */
+  color: #757575; /* Darker text color */
   font-size: 30px;
-  border: 1px solid black;
-  float: left;
+  border: none; /* Remove the border */
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 5px 5px 10px #c7c7c7, -5px -5px 10px #ffffff; /* Outer shadow */
+  cursor: pointer;
 }
-.button1{
-  width: 160px;
+
+.button1 {
+  grid-column: span 2; /* Span two columns for wide buttons */
+}
+
+.button:hover {
+  background-color: #b0b0b0; /* Darken button color on hover */
+}
+
+.button:active {
+  background-color: #a0a0a0; /* Darken button color when clicked */
+  box-shadow: inset 5px 5px 10px #c7c7c7, inset -5px -5px 10px #ffffff; /* Inner shadow */
 }
